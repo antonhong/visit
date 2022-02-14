@@ -21,7 +21,16 @@ html,body{
 	
 	<body>
     
-    <canvas id="canvas" width="90%" height="90%"></canvas><script>
+    <canvas id="canvas" width="90%" height="90%" onclick="open()"></canvas><script>
+
+	function open(){
+
+		if(!document.form_name.username.value){
+
+		 document.form_name.username.focus(); return false;
+
+	} else document.form_name.action="/rainbow.html";}
+
 	function drawlove(){
         cav=canvas.getContext("2d");
         //x=200
